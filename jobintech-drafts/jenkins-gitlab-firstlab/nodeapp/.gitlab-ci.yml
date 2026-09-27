@@ -1,0 +1,42 @@
+# default:
+# image: docker:24.0.5
+
+# cache:
+#   key: ${CI_COMMIT_REF_SLUG}
+#   paths:
+#     - node_modules/
+# variables :
+#   DOCKER_DRIVER: overlay2
+#   DOCKER_TLS_CERTDIR: ""
+#   DOCKER_HOST: tcp://docker:2375
+#   DOCKER_REGISTRY: 192.168.2.113:5000
+#   DOCKER_IMAGE: $DOCKER_REGISTRY/myapp:$CI_COMMIT_SHA
+
+# services:
+#   - name: docker:24.0.5-dind
+#     command:
+#       - "--insecure-registry"
+#       - "192.168.2.113:5000"
+      
+# stages:
+#   - build
+#   - test
+# build_job:
+#   stage: build
+#   script:
+#     - docker build -t $DOCKER_IMAGE . 
+#     - docker push  $DOCKER_IMAGE 
+# test_job:
+#   stage: test
+#   image: node:20
+#   before_script:
+#     - npm install
+#     - npm install --save-dev mochawesome
+#     - chmod +x node_modules/.bin/mocha
+#   script:
+#     - mkdir -p reports
+#     - npx mocha --reporter mochawesome --reporter-options reportDir=reports,reportFilename=report
+#   artifacts:
+#     paths:
+#       - reports/
+#     expire_in: 1 week

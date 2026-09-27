@@ -1,0 +1,142 @@
+/* Navbar.css */
+.navbar-container {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar-container nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-container .nav-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    gap: 2rem;
+  }
+  
+  
+  
+  .navbar-container .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      background: linear-gradient(90deg, #ff6b6b, #f8e71c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin: 20px 0;
+    }
+  
+  
+  .navbar-container button {
+    background: #ffb400;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .navbar-container button:hover {
+    background: #ff9f00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .navbar-container nav {
+      flex-direction: column;
+    }
+  
+    .navbar-container ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-container li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  .dropdown-container {
+    position: relative;
+    cursor: pointer;
+  }
+  .dropdown-container .icon {
+   font-size: 1.5rem;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 300px;
+    z-index: 1000;
+  }
+  .dropdown-menu::before {
+    content: '\f0de';
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+    top: -5px;
+    right: 15px;
+    z-index: 1000;
+    color: white;
+  }
+  
+  /* Each dropdown item */
+  .dropdown-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Information part of dropdown item */
+  .dropdown-item-info p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Cancel button styling in dropdown */
+  .dropdown-item button {
+    background-color: #ff3b3b;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-item button:hover {
+    background-color: #e60000;
+  }
+  
+  /* No reservations message */
+  .no-reservations {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    font-size: 0.9rem;
+  }

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic styles for the slider container */
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #c6c6c6;
+    border-radius: 5px;
+  }
+  
+  .range-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* Slider thumb (the draggable part) */
+  .range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #25daa5;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+    pointer-events: all;
+  }
+  
+  .range-slider .range-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: #25daa5;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  

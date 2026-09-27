@@ -1,0 +1,53 @@
+services:
+  app-1:
+    build: .
+    container_name: nginx-lab-app-1
+    environment:
+      - APP_NAME=Node-Instance-01
+      - PORT=3000
+    restart: always
+
+  app-2:
+    build: .
+    container_name: nginx-lab-app-2
+    environment:
+      - APP_NAME=Node-Instance-02
+      - PORT=3000
+    
+
+  app-3:
+    build: .
+    container_name: nginx-lab-app-3
+    environment:
+      - APP_NAME=Node-Instance-03
+      - PORT=3000
+    restart: always
+
+  app-4:
+    build: .
+    container_name: nginx-lab-app-4
+    environment:
+      - APP_NAME=Node-Instance-04
+      - PORT=3000
+    restart: always
+  
+  nginx:
+    image: nginx:latest
+    container_name: nginx-lab-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx/certs:/etc/nginx/certs
+    depends_on:
+      - app-1
+      - app-2
+      - app-3
+      - app-4
+    restart: always
+
+networks:
+  default:
+    name: nginx-lab-network

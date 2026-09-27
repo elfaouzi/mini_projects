@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TikTok Shop Receipt</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .header img {
+      width: 70px;
+      filter: drop-shadow(0 0 2px #fe2c55);
+    }
+    .header h2 {
+      color: #111;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    .order-info {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 25px;
+      letter-spacing: 0.05em;
+    }
+    .order-info span {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section h3 {
+      border-bottom: 2px solid #fe2c55;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      color: #fe2c55;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+    .product {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #ccc;
+      font-size: 1rem;
+    }
+    .product:last-child {
+      border-bottom: none;
+    }
+    .total {
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding-top: 15px;
+    }
+    .highlight {
+      color: #fe2c55;
+    }
+    .address, .payment-info {
+      line-height: 1.7;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .address strong, .payment-info strong {
+      color: #333;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+      margin-top: 40px;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 640px) {
+      body {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+      .header h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="./tik-tok.png" alt="TikTok Logo" />
+    <h2>Order Receipt</h2>
+  </div>
+
+  <div class="order-info">
+    <span><strong>Order No:</strong> #TKTA47-0427819</span>
+    <span><strong>Order Date:</strong> May 18, 2025</span>
+  </div>
+
+  <div class="section">
+    <h3>Order Summary</h3>
+    <div class="product">
+      <span>SLS Anya Coordinates (Small)</span>
+      <span>₱229.00</span>
+    </div>
+    <div class="product">
+      <span>SyGirl Sexy Silk Satin Shorts (Small)</span>
+      <span>₱39.00</span>
+    </div>
+    <div class="product">
+      <span>Shipping</span>
+      <span>₱36.00</span>
+    </div>
+    <div class="product total">
+      <span>Total</span>
+      <span class="highlight">₱304.00</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Delivery Information</h3>
+    <div class="address">
+      <strong>Name:</strong> Elto*****<br/>
+      <strong>Address:</strong> Purok 6 Mantic, Tangub City, Misamis Occidental<br/>
+      <strong>Postal Code:</strong> 7214<br/>
+      <strong>Phone:</strong> +63 963 344 1620<br/>
+      <strong>Estimated Delivery:</strong> May 28 – June 8, 2025
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Payment Method</h3>
+    <div class="payment-info">
+      <strong>Paid via:</strong> VISA ending in **** 9826<br/>
+      <strong>Payment Status:</strong> Paid
+    </div>
+  </div>
+
+  <div class="footer">
+    Return & Refund | Shipping Info | Customer Support<br/>
+    Thank you for shopping with TikTok Shop!<br/>
+    &copy; 2025 TikTok. All rights reserved.
+  </div>
+</body>
+</html>

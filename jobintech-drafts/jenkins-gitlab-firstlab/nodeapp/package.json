@@ -1,0 +1,27 @@
+{
+  "name": "gitlabci",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/devops9295525/gitlabci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devops9295525/gitlabci/issues"
+  },
+  "homepage": "https://gitlab.com/devops9295525/gitlabci#readme",
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

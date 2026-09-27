@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build & Test') {
+            steps {
+                echo "Building and testing branch ${env.BRANCH_NAME}"
+                sh 'python3 app.py'
+                sh 'python3 test_app.py'
+                
+            }
+        }
+
+        stage('Deploy to Main') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "Deploying only main branch"
+                sh 'echo "Production deployment for main" > deploy_main.txt'
+            }
+        }
+
+        stage('Deploy to Dev') {
+            when {
+                branch 'dev'
+            }
+            steps {
+                echo "Deploying only dev branch"
+                sh 'echo "Deployment for dev branch" > deploy_dev.txt'
+            }
+        }
+    }
+}

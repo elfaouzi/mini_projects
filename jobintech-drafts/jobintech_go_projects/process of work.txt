@@ -1,0 +1,7 @@
+process of work : 
+
+creating project groupe and put on it repo of app and repo of maniefests 
+give acces to minikube in default name space the acces token to read what is in registry
+and also cerate tokens nedded so can push image to registry via jobs 
+
+so when we modify Something in code , and push it into main or any repo that we configured in 'only' in pipeline , it build after testing ofc , and image builded it pushed into registry and clone the repo of maniefest and modify the tag of image using , so argo cd will catch the change and use tha new image in pod , 

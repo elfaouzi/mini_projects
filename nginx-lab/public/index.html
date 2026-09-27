@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx Lab | High Performance Express Node</title>
+    <meta name="description" content="A premium landing page served by Express.js for Nginx load balancing labs.">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section class="hero">
+        <div class="content">
+            <div class="logo-container">
+                <img src="/images/nginx_logo_abstract.png" alt="Nginx Lab Logo">
+            </div>
+            <h1 id="app-name">Nginx Lab Node</h1>
+            <p>
+                Experience high-performance web serving. This instance is optimized for
+                load balancing and reverse proxy architecture experiments.
+            </p>
+            <a href="#" class="btn">Explore Server Metrics</a>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-val">Scale</span>
+                    <span class="stat-label">Distributed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">99.9%</span>
+                    <span class="stat-label">Uptime Goal</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">
+                        10ms </span>
+                    <span class="stat-label">Latency</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fetch instance info from server
+        async function fetchInfo() {
+            try {
+                const response = await fetch('/api/info');
+                const data = await response.json();
+                document.getElementById('app-name').textContent = data.appName;
+                document.title = `${data.appName} | Nginx Lab`;
+            } catch (err) {
+                console.error('Failed to fetch info', err);
+            }
+        }
+        fetchInfo();
+
+        // Subtle micro-interaction: update stats randomly to simulate real-time data
+        setInterval(() => {
+            const lat = document.querySelectorAll('.stat-val')[2];
+            if (lat) {
+                const newVal = Math.floor(Math.random() * 5) + 5;
+                lat.textContent = `<${newVal}ms`;
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>

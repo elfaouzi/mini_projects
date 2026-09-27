@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Professional Task Manager</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-tasks"></i> Todo App</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <!-- Add Todo Form -->
+        <section class="add-todo-section">
+            <div class="add-todo-card">
+                <h2><i class="fas fa-plus-circle"></i> Add New Task</h2>
+                <form id="todoForm" class="todo-form">
+                    <div class="form-group">
+                        <label for="todoTitle">Task Title *</label>
+                        <input type="text" id="todoTitle" name="title" placeholder="Enter task title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="todoDescription">Description</label>
+                        <textarea id="todoDescription" name="description" placeholder="Enter task description (optional)..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Todos List -->
+        <section class="todos-section">
+            <div class="todos-header">
+                <h2><i class="fas fa-list"></i> Your Tasks</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading tasks...
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started!</p>
+            </div>
+
+            <!-- Todos Container -->
+            <div id="todosContainer" class="todos-container">
+                <!-- Todos will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+            <div class="stats-card">
+                <div class="stat-item">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <span class="stat-number" id="totalTasks">0</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-number" id="pendingTasks">0</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <span class="stat-number" id="completedTasks">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for editing todos -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Task</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="editForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editTitle">Task Title *</label>
+                    <input type="text" id="editTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescription">Description</label>
+                    <textarea id="editDescription" name="description" rows="3"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

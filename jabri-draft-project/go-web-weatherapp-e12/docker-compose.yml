@@ -1,0 +1,14 @@
+services:
+  mongo-weather:
+    image: mongodb/mongodb-community-server:latest
+    container_name: mongo-weather
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=aze789+++
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -1,0 +1,27 @@
+# TEST: Auto-deploy triggered at 2025-11-10 18:15
+# TEST: Auto-deploy triggered at 2025-11-10 18:15 2nd line
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: registry.gitlab.com/elfaouzi/weather_app/backend:latest  # ← CI updates
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGODB_URI
+              value: "mongodb://admin:aze789+++@mongo-service:27017"
+            - name: WeatherApiKey
+              value: 17b1a4327295454dbaf104104252609

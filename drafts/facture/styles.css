@@ -1,0 +1,74 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 0;
+}
+
+.receipt-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 100px;
+}
+
+.header h2 {
+  color: #000;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.address,
+.payment-info {
+  line-height: 1.6;
+}
+
+.card-icon {
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.highlight {
+  color: #fe2c55;
+}

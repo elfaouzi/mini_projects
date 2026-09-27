@@ -1,0 +1,46 @@
+
+services:
+  backend:  # Your Go app service
+    build: ./go-backend-weatherapp-e12  # Builds from your Dockerfile
+    container_name: go-web-weatherapp-backend
+    ports:
+      - "8080:8080"  # Maps host:container port
+    environment:
+      - WeatherApiKey=17b1a4327295454dbaf104104252609  # Your API key
+      - MONGODB_URI=mongodb://admin:aze789+++@mongo-weather:27017/  # Points to Mongo service
+      - PORT=8080
+      - GIN_MODE=release
+    depends_on:
+      - mongo-weather  # Ensures Mongo starts first
+    networks:
+      - app-network
+  frontend:
+    build: ./react-web-weatherapp-e12
+    container_name: react-web-weatherapp-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - app-network
+
+
+  mongo-weather:  # MongoDB service
+    image: mongo:4.4 # Official Mongo image (latest stable)
+    container_name: mongo-weather
+    ports:
+      - "27018:27017"  # Optional: Expose for local tools like Mongo Compass
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=aze789+++
+    volumes:
+      - mongo-data:/data/db  # Persists data outside container
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:  # Named volume for Mongo persistence
+
+networks:
+  app-network:  # Custom network for inter-container comms

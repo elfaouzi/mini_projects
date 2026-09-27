@@ -1,0 +1,17 @@
+{
+  "name": "nginx-lab-express",
+  "version": "1.0.0",
+  "description": "Express.js app for Nginx lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "esbuild server.js --bundle --platform=node --target=node22 --outfile=dist/server.js && cp -r public dist/"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
+}

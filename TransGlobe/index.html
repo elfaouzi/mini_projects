@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransFrama Logistics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0-alpha.3/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Trans<span>Frama</span></div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">Global Logistics, Seamless Solutions</h1>
+          <p class="hero-subtitle">Connecting Businesses Across Borders</p>
+          <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+      </section>
+      <!-- About Us Section -->
+      <section id="about" class="about-section fade-in-section ">
+        <div class="about-content-container">
+          <div class="about-image-gallery">
+            <div class="slideshow-container">
+              <!-- Images are hidden initially except for the first one using inline style -->
+              <img src="images/image1.jpg" alt="Transport Image 1" class="about-image slideshow-image" style="display: block;">
+              <img src="images/image3.jpg" alt="Transport Image 2" class="about-image slideshow-image" style="display: none;">
+              <img src="images/image2.jpg" alt="Transport Image 3" class="about-image slideshow-image" style="display: none;">
+            </div>
+          </div>
+          <div class="about-content">
+            <h2 class="section-title">About TransFrama</h2>
+            <p class="section-description">
+              <strong>TransFrama</strong> is a global leader in international logistics and transportation solutions. With a robust network spanning over 120 countries, we specialize in providing seamless, efficient, and reliable shipping services across air, sea, and land.
+            </p>
+            <ul class="section-description-list">
+              <li><strong>Global Network</strong>: Connecting businesses worldwide with localized expertise and unmatched reach.</li>
+              <li><strong>Innovation in Logistics</strong>: Harnessing the latest technology for real-time tracking, route optimization, and supply chain efficiency.</li>
+              <li><strong>Sustainability</strong>: Our commitment to eco-friendly practices and green logistics solutions to minimize our carbon footprint.</li>
+              <li><strong>Customer Commitment</strong>: Offering personalized services and reliable solutions tailored to meet the unique needs of each client.</li>
+            </ul>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+          </div>
+        </div>
+      </section>
+  <!-- Services Section with fade-in-section animation -->
+<section id="services" class="services-section fade-in-section">
+    <div class="services-container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-description">
+        At TransFrama, we provide comprehensive and efficient transportation solutions to meet the diverse needs of our clients. From air freight to sea and land transport, we ensure your goods reach their destination safely and on time.
+      </p>
+      <div class="services-cards-container">
+        <div class="service-card">
+          <img src="https://picsum.photos/100/100?random=4" alt="Air Freight" class="service-icon">
+          <h3 class="service-title">Air Freight</h3>
+          <p class="service-description">Reliable and fast air freight services for international shipping, ensuring timely deliveries across borders.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <img src="https://picsum.photos/100/100?random=5" alt="Sea Freight" class="service-icon">
+          <h3 class="service-title">Sea Freight</h3>
+          <p class="service-description">Cost-effective sea freight solutions for large shipments, with an emphasis on safety and punctuality.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <img src="https://picsum.photos/100/100?random=6" alt="Land Transport" class="service-icon">
+          <h3 class="service-title">Land Transport</h3>
+          <p class="service-description">Efficient land transport options, including trucks and rail, to connect key destinations across continents.</p>
+          <a href="#" class="service-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="why-choose-us" class="why-choose-us-section">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="heading">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <p class="section-subtitle">Discover the key reasons why we are the best choice for your business success. We offer unmatched expertise, reliability, and innovation to deliver exceptional results.</p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <!-- Feature 1: Expert Team -->
+            <div class="feature-card">
+                <img src="https://img.icons8.com/ios/50/000000/teamspeak.png" alt="Expert Team" class="feature-icon">
+                <h3 class="feature-title">Expert Team of Professionals</h3>
+                <p class="feature-description">Our team is made up of industry veterans with years of experience delivering innovative, high-quality solutions tailored to your needs.</p>
+            </div>
+
+            <!-- Feature 2: Tailored Solutions -->
+            <div class="feature-card">
+                <img src="https://img.icons8.com/ios/50/000000/puzzle.png" alt="Tailored Solutions" class="feature-icon">
+                <h3 class="feature-title">Tailored Solutions</h3>
+                <p class="feature-description">We understand that each business is unique. Our solutions are fully customizable to fit your specific challenges and goals.</p>
+            </div>
+
+            <!-- Feature 3: Innovative Technology -->
+            <div class="feature-card">
+                <img src="https://img.icons8.com/ios/50/000000/robot.png" alt="Innovative Technology" class="feature-icon">
+                <h3 class="feature-title">Cutting-Edge Technology</h3>
+                <p class="feature-description">We leverage the latest technologies to ensure that you stay ahead of the competition and drive long-term success.</p>
+            </div>
+
+            <!-- Feature 4: Client-Centric Approach -->
+            
+        </div>
+        
+    </div>
+</section>
+<section id="process" class="process-section">
+  <div class="container">
+    <h2 class="section-title">Our Process</h2>
+    
+    <!-- Wavy SVG line background -->
+    <svg class="timeline-line" viewBox="0 0 4 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 50,0 Q 60,20 50,40 T 50,80 T 50,120" stroke="#007bff" stroke-width="2" fill="none"/>
+    </svg>
+
+    <div class="timeline">
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-icon">&#9679;</div>
+        <div class="timeline-content">
+          <h3>Step 1: Initial Consultation</h3>
+          <p>We start with a comprehensive consultation to understand your logistics needs.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-icon">&#9679;</div>
+        <div class="timeline-content">
+          <h3>Step 2: Strategic Planning</h3>
+          <p>Our team devises a tailored plan that aligns with your objectives and timelines.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-icon">&#9679;</div>
+        <div class="timeline-content">
+          <h3>Step 3: Execution</h3>
+          <p>We handle all aspects of transportation with efficiency and reliability.</p>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+</section>
+
+
+<section id="testimonials" class="testimonials-section">
+  <div class="testimonials-container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-description">
+      Our clients trust us to deliver exceptional logistics solutions with a customer-centric approach. Here are some of their experiences working with us:
+    </p>
+    <div class="carousel-wrapper">
+      <div class="testimonial-card">
+        <div class="card-header">
+          <h3>John Doe</h3>
+          <img src="https://picsum.photos/80" alt="John Doe">
+        </div>
+        <p class="client-message">
+          "TransFrama has been an amazing logistics partner. <strong>Reliable</strong> and <strong>professional service</strong> every time!"
+        </p>
+      </div>
+      <div class="testimonial-card">
+        <div class="card-header">
+          <h3>Jane Smith</h3>
+          <img src="https://picsum.photos/81" alt="Jane Smith">
+        </div>
+        <p class="client-message">
+          "We trust TransFrama for all our <strong>global shipping needs</strong>. Exceptional customer service."
+        </p>
+      </div>
+      <div class="testimonial-card">
+        <div class="card-header">
+          <h3>Alex Brown</h3>
+          <img src="https://picsum.photos/82" alt="Alex Brown">
+        </div>
+        <p class="client-message">
+          "Their logistics solutions are <strong>unbeatable</strong>. TransFrama has simplified our supply chain."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="partners-section">
+  <div class="partners-container">
+    <h2 class="section-title">Our Partners & Affiliations</h2>
+    <p class="section-description">
+      We collaborate with top-tier organizations and trusted partners to deliver the best logistics solutions. Here's a glimpse of those who trust us:
+    </p>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <img src="https://picsum.photos/25" alt="Partner 1" class="partner-logo">
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/15" alt="Partner 2" class="partner-logo">
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/16" alt="Partner 3" class="partner-logo">
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/17" alt="Partner 4" class="partner-logo">
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/19" alt="Partner 5" class="partner-logo">
+      </div>
+      <div class="partner-card">
+        <img src="https://picsum.photos/21" alt="Partner 6" class="partner-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you. Please fill out the form below and we’ll get back to you shortly!</p>
+
+        <form action="#">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Image (could be a background image or an image in the section) -->
+      
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Contact Information -->
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i>123 Main Street, City, Country</li>
+          <li><i class="fas fa-phone-alt"></i>(+123) 456-7890</li>
+          <li><i class="fas fa-envelope"></i>contact@company.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+  <!-- JavaScript for Slideshow -->
+  <script>
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.slideshow-image');
+  
+    function showNextImage() {
+      images[currentImageIndex].style.display = 'none'; // Hide the current image
+      currentImageIndex = (currentImageIndex + 1) % images.length; // Move to next image
+      images[currentImageIndex].style.display = 'block'; // Show the new image
+    }
+  
+    // Start the slideshow
+    setInterval(showNextImage, 2000);
+    // Function to observe sections and add visible class when they come into view
+function handleSectionFadeIn() {
+  const fadeInSections = document.querySelectorAll('.fade-in-section'); // Select all sections with 'fade-in-section' class
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 }); // Change threshold based on the effect you need
+
+  fadeInSections.forEach(section => {
+    observer.observe(section); // Observe each section
+  });
+}
+
+// Trigger fade-in on page load
+document.addEventListener('DOMContentLoaded', handleSectionFadeIn);
+
+
+function handleTimelineAnimations() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  timelineItems.forEach(item => observer.observe(item));
+}
+
+document.addEventListener('DOMContentLoaded', handleTimelineAnimations);
+
+document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+  card.style.setProperty('--card-index', index);
+});
+
+
+  </script>
+  
+</body>
+</html>

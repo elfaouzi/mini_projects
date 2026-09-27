@@ -1,0 +1,17 @@
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Fix for file changes not detected on some file systems
+      - REACT_APP_API_URL=http://backend:5000/api  # URL of the backend API

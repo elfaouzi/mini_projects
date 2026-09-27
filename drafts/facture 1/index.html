@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Order Invoice</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Roboto', 'Open Sans', sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 40px 24px 40px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #ee4d2d;
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: #ee4d2d;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-right: 18px;
+        }
+        .store-info {
+            flex: 1;
+        }
+        .store-info h1 {
+            margin: 0;
+            font-size: 1.7rem;
+            color: #ee4d2d;
+            font-weight: 700;
+        }
+        .store-info .invoice-title {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: 4px;
+        }
+        .order-details {
+            text-align: right;
+            font-size: 0.98rem;
+            color: #555;
+        }
+        .section-title {
+            color: #ee4d2d;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .customer-info {
+            background: #fbeee6;
+            border: 1px solid #f3d1c1;
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        .customer-info p {
+            margin: 4px 0;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+        th, td {
+            padding: 10px 8px;
+            text-align: left;
+        }
+        th {
+            background: #ee4d2d;
+            color: #fff;
+            font-weight: 600;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        tr:nth-child(even) td {
+            background: #fbeee6;
+        }
+        tr:nth-child(odd) td {
+            background: #fff;
+        }
+        td, th {
+            border-bottom: 1px solid #f3d1c1;
+        }
+        .summary {
+            float: right;
+            width: 320px;
+            background: #fff7f2;
+            border: 1px solid #f3d1c1;
+            border-radius: 6px;
+            padding: 18px 24px;
+            margin-bottom: 32px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .summary-row.total {
+            font-weight: bold;
+            color: #ee4d2d;
+            font-size: 1.15rem;
+            border-top: 2px solid #ee4d2d;
+            padding-top: 8px;
+            margin-top: 12px;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 1rem;
+            margin-top: 32px;
+        }
+        .barcode {
+            margin: 18px auto 0 auto;
+            width: 220px;
+            height: 40px;
+            background: repeating-linear-gradient(90deg, #222 0 6px, #fff 6px 12px);
+            border-radius: 4px;
+            display: block;
+        }
+        @media print {
+            body {
+                background: #fff;
+            }
+            .invoice-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0 0 0 0;
+                max-width: 100%;
+            }
+            .summary {
+                float: none;
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <div class="logo">Shopee</div>
+            <div class="store-info">
+                <h1>Shopee Philippines</h1>
+                <div class="invoice-title">Order Invoice</div>
+            </div>
+            <div class="order-details">
+                <div>Order #: <b>#ORD-23052025-001</b></div>
+                <div>Date: May 23, 2025</div>
+            </div>
+        </div>
+        <div class="section-title">Customer Information</div>
+        <div class="customer-info">
+            <div style="display: flex; flex-wrap: wrap; gap: 32px;">
+                <div style="flex:1 1 220px; min-width:200px;">
+                    <p><b>Name:</b> Abdellatif El*****</p>
+                    <p><b>Phone:</b> +63 912 345 6789</p>
+                    <p><b>Email:</b> eltoro*********.com</p>
+                </div>
+                <div style="flex:1 1 320px; min-width:220px;">
+                    <p><b>Delivery Address:</b></p>
+                    <p>Guinobatan Corehousing, Calapan City, Oriental Mindoro, 5200, Philippines</p>
+                    <p><b>Delivery Contact:</b> 09564875843</p>
+                    <p><b>Delivery Note:</b> Please call upon arrival. Leave at security if not available.</p>
+                    <p><b>Delivery Date Range:</b> 28/05/2025 - 04/06/2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">Payment Details</div>
+        <div class="customer-info" style="margin-bottom: 24px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 32px;">
+                <div style="flex:1 1 220px; min-width:200px;">
+                    <p><b>Payment Method:</b> Credit/Debit Card (VISA)</p>
+                    <p><b>Cardholder Name:</b> Abdellatif El****</p>
+                    <p><b>Card Number:</b> **** **** **** 4321</p>
+                </div>
+                <div style="flex:1 1 220px; min-width:200px;">
+                    <p><b>Payment Status:</b> Paid</p>
+                    <p><b>Transaction ID:</b> CARD-20250523-123456789</p>
+                    <p><b>Payment Date:</b> May 23, 2025, 10:14 AM</p>
+                    <p><b>Paid Amount:</b> ₱6,101</p>
+                    <p><b>Reference:</b> Shopee Checkout</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">Order Details</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>PINKFLASH 3 Years Anniversary Full Set 8 Pcs</td><td>1</td><td>₱610</td><td>₱610</td></tr>
+                <tr><td>2</td><td>Kliou Vintage Hollow-out High Split Maxi Dress</td><td>1</td><td>₱416</td><td>₱416</td></tr>
+                <tr><td>3</td><td>MXN Siren Ruffle Cut Sexy Dress</td><td>1</td><td>₱178</td><td>₱178</td></tr>
+                <tr><td>4</td><td>Women’s Suit Skirt Terno Dress</td><td>1</td><td>₱195</td><td>₱195</td></tr>
+                <tr><td>5</td><td>Tassel Denim Jeans Short</td><td>1</td><td>₱100</td><td>₱100</td></tr>
+                <tr><td>6</td><td>13 pcs Non Stick Cookware Set</td><td>1</td><td>₱315</td><td>₱315</td></tr>
+                <tr><td>7</td><td>Multifunction 4/7 Egg Fry Pan</td><td>1</td><td>₱255</td><td>₱255</td></tr>
+                <tr><td>8</td><td>Foldable Ottoman Waterproof Foot Stool (Buy1Take1)</td><td>1</td><td>₱656</td><td>₱656</td></tr>
+                <tr><td>9</td><td>HOMEFUN Mini Refrigerator With Freezer</td><td>1</td><td>₱4,376</td><td>₱4,376</td></tr>
+            </tbody>
+        </table>
+        <div class="summary">
+            <div class="summary-row"><span>Subtotal</span><span>₱6,101</span></div>
+            <div class="summary-row"><span>Discount</span><span>₱0</span></div>
+            <div class="summary-row"><span>Shipping Fee (Premium)</span><span>₱250</span></div>
+            <div class="summary-row total"><span>Total Amount</span><span>₱6,351</span></div>
+        </div>
+        <div style="clear:both"></div>
+        <div class="footer">
+            <div>Thank you for shopping with Shopee!</div>
+            <div>For any inquiries, please contact Shopee customer support.</div>
+            <div class="barcode"></div>
+        </div>
+    </div>
+</body>
+</html>
